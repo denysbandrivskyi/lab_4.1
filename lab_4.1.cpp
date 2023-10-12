@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     int k, N;
-    double result = 0.0;
+    double S = 0.0;
 
     cout << "Enter the lower bound (k): ";
     cin >> k;
@@ -20,40 +20,40 @@ int main() {
     // Using while loop
     int i = k;
     while (i <= N) {
-        result += (1.0 * i * i) / (k * k + N * N);
+        S += (1.0 * i * i) / (k * k + N * N);
         i++;
     }
 
-    cout << "Sum using while loop: " << result << endl;
+    cout << "Sum using while loop: " << S << endl;
 
-    result = 0.0; // Reset result
+    S = 0.0; // Reset result
 
     // Using do-while loop
     i = k;
     do {
-        result += (1.0 * i * i) / (k * k + N * N);
+        S += (1.0 * i * i) / (k * k + N * N);
         i++;
     } while (i <= N);
 
-    cout << "Sum using do-while loop: " << result << endl;
+    cout << "Sum using do-while loop: " << S << endl;
 
-    result = 0.0; // Reset result
+    S = 0.0; // Reset result
 
     // Using for loop (increasing)
     for (i = k; i <= N; i++) {
-        result += (1.0 * i * i) / (k * k + N * N);
+        S += (1.0 * i * i) / (k * k + N * N);
     }
 
-    cout << "Sum using for loop (increasing): " << result << endl;
+    cout << "Sum using for loop (increasing): " << S << endl;
 
-    result = 0.0; // Reset result
+    S = 0.0; // Reset result
 
     // Using for loop (decreasing)
     for (i = N; i >= k; i--) {
-        result += (1.0 * i * i) / (k * k + N * N);
+        S += (1.0 * i * i) / (k * k + N * N);
     }
 
-    cout << "Sum using for loop (decreasing): " << result << endl;
+    cout << "Sum using for loop (decreasing): " << S << endl;
 
     return 0;
 }
